@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Watchlist</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <h1 class="title-header">Find your film</h1>
+      <a href="">My Watchlist</a>
+      <div>
+        <input placeholder="Blade Runner" />
+        <button>Search</button>
+      </div>
+    </header>
+    <div class="list">
+      <div class="card">
+        <img
+          src="./src/images/placeholders/bladerunnerPlaceholder.png"
+          alt=""
+        />
+        <div class="card-description">
+          <!-- movie title / rating icon / rating amount -->
+          <div class="card-title-row">
+            <h2>Blade Runner</h2>
+            <img src="./src/images/placeholders/RatingIcon.png" alt="" />
+            <p>8.1</p>
+          </div>
+          <!-- run time / genre / wishlist btn -->
+          <div class="card-details">
+            <p>164 min</p>
+            <p>Action, Drama, Mystery</p>
+            <div class="wishlist-btn">
+              <button class="btn">
+                <img src="./src/images/placeholders/watchlistIcon.png" alt="" />
+              </button>
+              <p>Remove</p>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
+            suscipit nostrum veniam saepe rerum totam accusamus! Totam id
+            eveniet vel adipisci, odit est quod officiis odio vitae vero
+            cupiditate excepturi!
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
