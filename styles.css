@@ -1,67 +1,70 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color: rgb(102, 102, 102);
+}
+
+body {
+  background-color: #1c1c1c;
   color: rgb(221, 221, 221);
 }
 
 .list {
   border: 1px solid purple;
   height: 80vh;
-  width: 95%;
+  width: 90vw;
   margin: auto;
   overflow: hidden;
+  background-color: #121212;
 }
 
 /* card start */
 
 .card {
   display: flex;
-  height: 30%;
-  border: 1px solid yellow;
+  border-bottom: 1px solid #2c2c2c;
   align-content: center;
+  margin: 0 40px 0 40px;
+  padding: 20px 0 20px 0;
 }
 
-.card img {
-  height: 90%;
+.film-img {
+  width: 20%;
   align-self: center;
 }
 
-.card-description {
+.card-info {
   display: flex;
   flex-direction: column;
   align-self: center;
-  height: 80%;
-  margin: 1rem;
-  border: 1px solid blue;
+  margin-left: 15px;
+  gap: 10px;
 }
 
 .card-title-row {
   display: flex;
   flex-direction: row;
-  border: 1px solid red;
+  align-content: center;
+  align-items: center;
+  font-size: 12px;
 }
 
 .card-title-row h2 {
   align-self: center;
-  margin-right: 1rem;
-  height: 1em;
-  border: 1px solid black;
+  font-size: 18px;
+  margin-right: 0.5rem;
 }
 
 .card-title-row img {
   margin-right: 0.3rem;
-  height: 1em;
-  border: 1px solid red;
+  height: 100%;
 }
 
 .card-details {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 25px;
-  border: 1px solid red;
-  height: 30px;
+  gap: 15px;
+  font-size: 12px;
 }
 
 .wishlist-btn {
@@ -71,20 +74,16 @@ body {
   align-items: center;
 }
 
-.wishlist-btn p {
-  margin-left: 2px;
-}
-
 .btn {
   background: none;
   border: none;
-  width: 30px;
   padding: 0;
+  padding-right: 5px;
 }
 
 .btn img {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 /* card end */
