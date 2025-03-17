@@ -1,6 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(39, 39, 42) transparent;
 }
 
 body {
@@ -9,11 +13,10 @@ body {
 }
 
 .list {
-  border: 1px solid purple;
   height: 80vh;
   width: 90vw;
   margin: auto;
-  overflow: hidden;
+  overflow: auto;
   background-color: #121212;
 }
 
@@ -28,7 +31,7 @@ body {
 }
 
 .film-img {
-  width: 20%;
+  width: 15%;
   align-self: center;
 }
 
@@ -87,3 +90,71 @@ body {
 }
 
 /* card end */
+
+/* Search start */
+
+#search {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 500px;
+  height: 40px;
+  background-color: #2e2e2f;
+  border-radius: 10px;
+}
+
+#search input {
+  background-color: #2e2e2f;
+  border: none;
+  width: 70%;
+  color: #9ca3af;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+#search img {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+#search button {
+  width: 20%;
+  background-color: #4b4b4b;
+  color: white;
+  border: none;
+  font-weight: 700;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Search End */
+
+/* Before search start */
+
+/* .before-search {
+  display: flex;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  justify-items: center;
+  justify-self: center;
+} */
+
+.placeholder {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: 45%;
+  color: #262626;
+}
+
+.placeholder img {
+  width: 60px;
+}
+
+/* Before search end */
+
+/* List Start */
