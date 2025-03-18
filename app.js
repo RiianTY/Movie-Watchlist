@@ -10,6 +10,8 @@ export default function local() {
 const list = document.querySelector(".list");
 const inputBox = document.querySelector(".input-box");
 const inputBtn = document.querySelector(".input-btn");
+// API key goes here from www.omdbapi.com
+const APIkey = "";
 
 let imdbArr = [];
 // checks if inputBtn is active (to stop an error on watchlist.js)
@@ -59,14 +61,14 @@ document.addEventListener("click", async (e) => {
 // used by the above items in the document to grab the data and store it in local
 async function getMovieData(id) {
   const res = await fetch(
-    `http://www.omdbapi.com/?i=${id}&y=&plot=short&r=json&apikey=545cc5dc`
+    `http://www.omdbapi.com/?i=${id}&y=&plot=short&r=json&apikey=${APIkey}`
   );
   return await res.json();
 }
 // uses the search query gets the data in the input box and pulls from the api
 async function dataGrab() {
   const res = await fetch(
-    `http://www.omdbapi.com/?s=${inputBox.value}&y=&plot=short&r=json&apikey=545cc5dc`
+    `http://www.omdbapi.com/?s=${inputBox.value}&y=&plot=short&r=json&apikey=${APIkey}`
   );
   const data = await res.json();
   // pushes all the data to the imdbArr
@@ -82,7 +84,7 @@ async function render() {
     const res = await fetch(
       // uses the id from the dataGrab function to get more data such as
       // the rating, genre, runtime, plot ect..
-      `http://www.omdbapi.com/?i=${imdbArr[i]}&y=&plot=short&r=json&apikey=545cc5dc`
+      `http://www.omdbapi.com/?i=${imdbArr[i]}&y=&plot=short&r=json&apikey=${APIkey}`
     );
     const data = await res.json();
     // list items that are rendered to the page
