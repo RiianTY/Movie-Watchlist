@@ -8,13 +8,20 @@
   </head>
   <body>
     <header class="header-container">
-      <h1 class="title-header">Find your film</h1>
-      <a href="./index.html">Search for movies</a>
+      <div class="header-items">
+        <h1 class="title-header">Find your film</h1>
+        <a class="watchlistBtn" href="./index.html">Search for movies</a>
+      </div>
     </header>
-    <div class="list watchlist">
-      <div class="placeholder">
-        <img class="before-search" src="./src/images/notPickedYet.png" alt="" />
-        <p class="before-search">Watchlist</p>
+    <div class="watchlist">
+      <div class="watchlist-placeholder">
+        <p id="no-items">Your watchlist is looking a little empty...</p>
+        <div class="watchlist-icon">
+          <img src="./src/images/watchlistIcon.png" alt="" />
+          <a class="watchlist-link" href="./index.html"
+            >Click here to add to your watchlist</a
+          >
+        </div>
       </div>
     </div>
     <script src="/watchlist.js" type="module"></script>

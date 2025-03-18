@@ -1,15 +1,18 @@
 // pulls in the local function from app.js to get the data needed for render
 import local from "/app.js";
+
 // calls DOM item
-const list = document.querySelector(".list");
+const list = document.querySelector(".watchlist");
 // creates render to push saved data in the local storage to the watchlist page
+
 function render(watchlist) {
-  // sets list.innerHtml to empty to clear previous data
-  list.innerHTML = "";
-  // loops over the localstorage data and calls it data
-  watchlist.forEach((data) => {
-    // html that is pushed to the page
-    list.innerHTML += `
+  if (watchlist.length > 0) {
+    // sets list.innerHtml to empty to clear previous data
+    list.innerHTML = "";
+    // loops over the localstorage data and calls it data
+    watchlist.forEach((data) => {
+      // html that is pushed to the page
+      list.innerHTML += `
         <div class="card">
           <img class="film-img" src="${data.poster}" alt="" />
           <div class="card-info">
@@ -35,7 +38,8 @@ function render(watchlist) {
           </div>
         </div>
     `;
-  });
+    });
+  }
 }
 // calls a render when the page orignally loads
 render(local());

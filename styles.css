@@ -10,11 +10,53 @@
 body {
   background-color: #1c1c1c;
   color: rgb(221, 221, 221);
+  margin-top: 15px;
 }
 
-.list {
-  height: 80vh;
-  width: 90vw;
+.header-container {
+  background-image: url("./src/images/Banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position-y: -200px;
+  height: 225px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.header-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title-header {
+  font-size: 50px;
+}
+
+.watchlistBtn {
+  font-size: 20px;
+  text-decoration: white;
+  color: white;
+  margin-left: 100px;
+}
+
+#no-items {
+  color: rgb(119, 119, 119);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.watchlist-link {
+  text-decoration: white;
+  color: white;
+}
+
+.list,
+.watchlist {
+  height: 75vh;
+  max-width: 900px;
   margin: auto;
   overflow: auto;
   background-color: #121212;
@@ -90,18 +132,33 @@ body {
   background-color: transparent;
 }
 
+.watchlist-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.watchlist-icon img {
+  object-fit: contain;
+  width: 15px;
+  padding: 0;
+  margin-bottom: 0;
+  height: 15px;
+  margin-right: 5px;
+}
+
 /* card end */
 
 /* Search start */
 
 #search {
   display: flex;
-  justify-content: center;
-  margin: auto;
+  position: relative;
   width: 500px;
   height: 40px;
   background-color: #2e2e2f;
   border-radius: 10px;
+  top: -20px;
+  margin: auto;
 }
 
 #search input {
@@ -134,16 +191,16 @@ body {
 
 /* Before search start */
 
-/* .before-search {
+.before-search {
   display: flex;
-  position: absolute;
-  top: 45%;
-  left: 45%;
+  position: relative;
+  top: 50%;
   justify-items: center;
   justify-self: center;
-} */
+}
 
-.placeholder {
+.placeholder,
+.watchlist-placeholder {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -154,8 +211,16 @@ body {
 
 .placeholder img {
   width: 60px;
+  margin-bottom: 5px;
 }
 
 /* Before search end */
 
-/* List Start */
+@media only screen and (max-width: 600px) {
+  .header-items {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+/* header title and watchlistBtn needs adding to media query and centering */
